@@ -1,423 +1,442 @@
 import logo from './logo.svg';
-import './App.css';
+import './assets/css/animate.css';
+import './assets/css/bootstrap.css'
+import './assets/css/bootstrap.css.map'
+import './assets/css/flexslider.css'
+// import './assets/css/icomoon.css'
+import './assets/css/owl.carousel.min.css'
+import './assets/css/style.css'
+import './assets/css/style.css.map'
+// src/components/ChatComponent.jsx (or wherever your component is)
+import React, { useState } from 'react';
+// Adjust the path based on where this component is located relative to agent/app.js
+import { sendMessage } from './assets/js/app.js';
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-      	<div id="colorlib-page">
-		<div class="container-wrap">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-			<div class="text-center">
-				<div class="author-img" style="background-image: url(images/pranav_50.jpeg); margin-top: 10px;"></div>
-				<h1 id="colorlib-logo"><a href="index.html">Pranav SK</a></h1>
-				<span class="position"><a href="#">Computer Science Engineer</a> in Banglore</span>
-			</div>
-			<nav id="colorlib-main-menu" role="navigation" class="navbar">
-				<div id="navbar" class="collapse">
-					<ul>
-						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
-						<li><a href="#" data-nav-section="about">About</a></li>
-						<li><a href="#" data-nav-section="services">Expertise</a></li>
-						<li><a href="#" data-nav-section="skills">Skills</a></li>
-						<li><a href="#" data-nav-section="education">Education</a></li>
-						<li><a href="#" data-nav-section="experience">Courses</a></li>
-						<li><a href="#" data-nav-section="work">Work</a></li>
-						<li><a href="#" data-nav-section="contact">Contact</a></li>
-					</ul>
-				</div>
-			</nav>
+	let input  = "Go to your projects section";
+	(async () => {
+		let input = "Go to your projects section";
+		console.log(await sendMessage(input));
+	})();
 
-		</aside>
+	return (
+		<div className="App">
+			<div id="colorlib-page">
+				<div className="container-wrap">
+					<a href="#" className="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+					<aside id="colorlib-aside" role="complementary" className="border js-fullheight">
+						<div className="text-center">
+							<div className="author-img" style={{ backgroundImage: "url('/assets/images/pranav_50.jpeg')", marginTop: '10px' }}></div>
+							<h1 id="colorlib-logo"><a href="index.html">Pranav SK</a></h1>
+							<span className="position"><a href="#">Computer Science Engineer</a> in Banglore</span>
+						</div>
+						<nav id="colorlib-main-menu" role="navigation" className="navbar">
+							<div id="navbar" className="collapse">
+								<ul>
+									<li className="active"><a href="#" data-nav-section="home">Home</a></li>
+									<li><a href="#" data-nav-section="about">About</a></li>
+									<li><a href="#" data-nav-section="services">Expertise</a></li>
+									<li><a href="#" data-nav-section="skills">Skills</a></li>
+									<li><a href="#" data-nav-section="education">Education</a></li>
+									<li><a href="#" data-nav-section="experience">Courses</a></li>
+									<li><a href="#" data-nav-section="work">Work</a></li>
+									<li><a href="#" data-nav-section="contact">Contact</a></li>
+								</ul>
+							</div>
+						</nav>
 
-		<div id="colorlib-main">
-			<section id="colorlib-hero" class="js-fullheight" data-section="home">
-				<div class="flexslider js-fullheight">
-					<ul class="slides">
-				   	<li style="background-image: url(images/pranav_2.jpg); background-size: cover; background-position: center;">
-				   		<div class="overlay"></div>
-				   		<div class="container-fluid">
-				   			<div class="row">
-					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-					   				<div class="slider-text-inner js-fullheight">
-					   					<div class="desc">
-						   					<h1 style="color: whitesmoke;">Hi! <br/>I'm Pranav</h1>
-												<p><a class="btn btn-primary btn-learn" style="color: whitesmoke;">Download CV <i class="icon-download4" style="color: whitesmoke;"></i></a></p>
+					</aside>
+
+					<div id="colorlib-main">
+						<section id="colorlib-hero" className="js-fullheight" data-section="home">
+							<div className="flexslider js-fullheight">
+								<ul className="slides">
+									<li style={{ backgroundImage: "url('/assets/images/pranav_2.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+										<div className="overlay"></div>
+										<div className="container-fluid">
+											<div className="row">
+												<div className="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+													<div className="slider-text-inner js-fullheight">
+														<div className="desc">
+															<h1 style={{ color: 'whitesmoke' }}>Hi! <br />I'm Pranav</h1>
+															<p>
+																<a className="btn btn-primary btn-learn" style={{ color: 'whitesmoke' }}>
+																	Download CV <i className="icon-download4" style={{ color: 'whitesmoke' }}></i>
+																</a>
+															</p>
+														</div>
+													</div>
+												</div>
 											</div>
-					   				</div>
-					   			</div>
-					   		</div>
-				   		</div>
-				   	</li>
-				   	<li style="background-image: url(images/pranav3.jpeg);">
-				   		<div class="overlay"></div>
-				   		<div class="container-fluid">
-				   			<div class="row">
-					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-					   				<div class="slider-text-inner">
-					   					<div class="desc">
-						   					<h1>I am <br/>a Software Engeering</h1>
-												<p><a class="btn btn-primary btn-learn">View Portfolio <i class="icon-briefcase3"></i></a></p>
+										</div>
+									</li>
+
+									<li style={{ backgroundImage: "url('/assets/images/pranav3.jpeg')" }}>
+										<div className="overlay"></div>
+										<div className="container-fluid">
+											<div className="row">
+												<div className="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+													<div className="slider-text-inner">
+														<div className="desc">
+															<h1>I am <br />a Software Engeering</h1>
+															<p><a className="btn btn-primary btn-learn">View Portfolio <i className="icon-briefcase3"></i></a></p>
+														</div>
+													</div>
+												</div>
 											</div>
-					   				</div>
-					   			</div>
-					   		</div>
-				   		</div>
-				   	</li>
-				  	</ul>
-			  	</div>
-			</section>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</section>
 
-			<section class="colorlib-about" data-section="about">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="col-md-12">
-									<div class="about-desc">
-										<span class="heading-meta">About Us</span>
-										<h2 class="colorlib-heading">Who Am I?</h2>
-										<p><strong>Hi I'm Pranav SK</strong></p>
-										<p>To obtain challenging and responsible position in an organization wherein I can 
-											contribute to the successful growth of an organization using my abilities and knowledge. 
-											Enthusiastically workfor an organization for its development and enhance my own skills and
-											knowledge.
-											</p>
+						<section className="colorlib-about" data-section="about">
+							<div className="colorlib-narrow-content">
+								<div className="row">
+									<div className="col-md-12">
+										<div className="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+											<div className="col-md-12">
+												<div className="about-desc">
+													<span className="heading-meta">About Us</span>
+													<h2 className="colorlib-heading">Who Am I?</h2>
+													<p><strong>Hi I'm Pranav SK</strong></p>
+													<p>To obtain challenging and responsible position in an organization wherein I can
+														contribute to the successful growth of an organization using my abilities and knowledge.
+														Enthusiastically workfor an organization for its development and enhance my own skills and
+														knowledge.
+													</p>
+												</div>
+											</div>
+										</div>
+										<div className="row">
+											<div className="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+												<div className="services color-1">
+													<span className="icon2"><i className="icon-bulb"></i></span>
+													<h3 style={{ fontSize: '13px' }}>Software Developer</h3>
+												</div>
+											</div>
+											<div className="col-md-3 animate-box" data-animate-effect="fadeInRight">
+												<div className="services color-2">
+													<span className="icon2"><i className="icon-globe-outline"></i></span>
+													<h3>Web Developer</h3>
+												</div>
+											</div>
+											<div className="col-md-3 animate-box" data-animate-effect="fadeInTop">
+												<div className="services color-3">
+													<span className="icon2"><i className="icon-data"></i></span>
+													<h3>Data Analyst</h3>
+												</div>
+											</div>
+											<div className="col-md-3 animate-box" data-animate-effect="fadeInBottom">
+												<div className="services color-4">
+													<span className="icon2"><i className="icon-phone3"></i></span>
+													<h3 style={{ fontSize: '10px' }}>Mobile Application Developer </h3>
+												</div>
+											</div>
+										</div>
+										<div className="row">
+											<div className="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+												<div className="hire">
+													<h2>I am happy to know you <br />that 300+ projects done sucessfully!</h2>
+													<a href="#" className="btn-hire">Hire me</a>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="row">
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-									<div class="services color-1">
-										<span class="icon2"><i class="icon-bulb"></i></span>
-										<h3 style="font-size: 13px;">Software Developer</h3>
-									</div>
-								</div>
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
-									<div class="services color-2">
-										<span class="icon2"><i class="icon-globe-outline"></i></span>
-										<h3>Web Developer</h3>
-									</div>
-								</div>
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
-									<div class="services color-3">
-										<span class="icon2"><i class="icon-data"></i></span>
-										<h3>Data Analyst</h3>
-									</div>
-								</div>
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
-									<div class="services color-4">
-										<span class="icon2"><i class="icon-phone3"></i></span>
-										<h3 style="font-size: 10px;">Mobile Application Developer </h3>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-									<div class="hire">
-										<h2>I am happy to know you <br/>that 300+ projects done sucessfully!</h2>
-										<a href="#" class="btn-hire">Hire me</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+						</section>
 
 
-			
-			<section class="colorlib-services" data-section="services">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">What I do?</span>
-							<h2 class="colorlib-heading">Here are some of my expertise</h2>
-						</div>
-					</div>
-					<div class="row row-pt-md">
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-1">
-								<span class="icon">
-									<i class="icon-bulb"></i>
-								</span>
-								<div class="desc">
-									<h3>Python</h3>
-									<p>version: 3</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-2">
-								<span class="icon">
-									<i class="icon-data"></i>
-								</span>
-								<div class="desc">
-									<h3>Java</h3>
-									<p>version: 17 </p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-3">
-								<span class="icon">
-									<i class="icon-phone3"></i>
-								</span>
-								<div class="desc">
-									<h3>Django</h3>
-									<p>version: 3.8</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-4">
-								<span class="icon">
-									<i class="icon-layers2"></i>
-								</span>
-								<div class="desc">
-									<h3>ReactJS</h3>
-									<p>version: 18.0</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-5">
-								<span class="icon">
-									<i class="icon-data"></i>
-								</span>
-								<div class="desc">
-									<h3>React native</h3>
-									<p>version: 0.68</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 text-center animate-box">
-							<div class="services color-6">
-								<span class="icon">
-									<i class="icon-phone3"></i>
-								</span>
-								<div class="desc">
-									<h3>Flutter</h3>
-									<p>version: 3.3</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			
-			<div id="colorlib-counter" class="colorlib-counters" style="background-image: url(images/cover_bg_1.jpg);" data-stellar-background-ratio="0.5">
-				<div class="overlay"></div>
-				<div class="colorlib-narrow-content">
-					<div class="row">
-					</div>
-					<div class="row">
-						<div class="col-md-3 text-center animate-box">
-							
-						</div>
-						<div class="col-md-3 text-center animate-box">
-							<span class="colorlib-counter js-counter" data-from="0" data-to="6" data-speed="3000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Projects</span>
-						</div>
-						<div class="col-md-3 text-center animate-box">
-							<span class="colorlib-counter js-counter" data-from="0" data-to="3" data-speed="3000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Clients</span>
-						</div>
-						<div class="col-md-3 text-center animate-box">
-						</div>
-					</div>
-				</div>
-			</div>
 
-			<section class="colorlib-skills" data-section="skills">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">My Specialty</span>
-							<h2 class="colorlib-heading animate-box">My Skills</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<p>Efficient in technical languages like C, JAVA,PYTHON.Familiar with operating systems, platforms like Windows (Win 7 & Win 10), Ubuntu, and Linux. Highly Efficient in Frameworks like django, Hypernet, react.js. Moderate efficiency in machine learning with tensorflow</p>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>python</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="75"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:95%">
-								    <span>95%</span>
-								  	</div>
+						<section className="colorlib-services" data-section="services">
+							<div className="colorlib-narrow-content">
+								<div className="row">
+									<div className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+										<span className="heading-meta">What I do?</span>
+										<h2 className="colorlib-heading">Here are some of my expertise</h2>
+									</div>
+								</div>
+								<div className="row row-pt-md">
+									<div className="col-md-4 text-center animate-box">
+										<div className="services color-1">
+											<span className="icon">
+												<i className="icon-bulb"></i>
+											</span>
+											<div className="desc">
+												<h3>Python</h3>
+												<p>version: 3</p>
+											</div>
+										</div>
+									</div>
+									<div className="col-md-4 text-center animate-box">
+										<div className="services color-2">
+											<span className="icon">
+												<i className="icon-data"></i>
+											</span>
+											<div className="desc">
+												<h3>Java</h3>
+												<p>version: 17 </p>
+											</div>
+										</div>
+									</div>
+									<div className="col-md-4 text-center animate-box">
+										<div className="services color-3">
+											<span className="icon">
+												<i className="icon-phone3"></i>
+											</span>
+											<div className="desc">
+												<h3>Django</h3>
+												<p>version: 3.8</p>
+											</div>
+										</div>
+									</div>
+									<div className="col-md-4 text-center animate-box">
+										<div className="services color-4">
+											<span className="icon">
+												<i className="icon-layers2"></i>
+											</span>
+											<div className="desc">
+												<h3>ReactJS</h3>
+												<p>version: 18.0</p>
+											</div>
+										</div>
+									</div>
+									<div className="col-md-4 text-center animate-box">
+										<div className="services color-5">
+											<span className="icon">
+												<i className="icon-data"></i>
+											</span>
+											<div className="desc">
+												<h3>React native</h3>
+												<p>version: 0.68</p>
+											</div>
+										</div>
+									</div>
+									<div className="col-md-4 text-center animate-box">
+										<div className="services color-6">
+											<span className="icon">
+												<i className="icon-phone3"></i>
+											</span>
+											<div className="desc">
+												<h3>Flutter</h3>
+												<p>version: 3.3</p>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>JAVA</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="60"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>C programing</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="85"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
-								    <span>85%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>Django</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								    <span>90%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="progress-wrap">
-								<h3>react.js</h3>
-								<div class="progress">
-								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
-								    <span>80%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="progress-wrap">
-								<h3>React Native </h3>
-								<div class="progress">
-								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:75%">
-								    <span>75%</span>
-								  	</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+						</section>
 
-			<section class="colorlib-education" data-section="education">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Education</span>
-							<h2 class="colorlib-heading animate-box">Education</h2>
+						<div id="colorlib-counter" className="colorlib-counters" style={{ backgroundImage: "url('/assets/images/cover_bg_1.jpg')" }} data-stellar-background-ratio="0.5">
+							<div className="overlay"></div>
+							<div className="colorlib-narrow-content">
+								<div className="row">
+								</div>
+								<div className="row">
+									<div className="col-md-3 text-center animate-box">
+
+									</div>
+									<div className="col-md-3 text-center animate-box">
+										<span className="colorlib-counter js-counter" data-from="0" data-to="6" data-speed="3000" data-refresh-interval="50"></span>
+										<span className="colorlib-counter-label">Projects</span>
+									</div>
+									<div className="col-md-3 text-center animate-box">
+										<span className="colorlib-counter js-counter" data-from="0" data-to="3" data-speed="3000" data-refresh-interval="50"></span>
+										<span className="colorlib-counter-label">Clients</span>
+									</div>
+									<div className="col-md-3 text-center animate-box">
+									</div>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<div class="fancy-collapse-panel">
-								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-									{/* <!-- <div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingOne">
-									        <h4 class="panel-title">
+
+						<section className="colorlib-skills" data-section="skills">
+							<div className="colorlib-narrow-content">
+								<div className="row">
+									<div className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+										<span className="heading-meta">My Specialty</span>
+										<h2 className="colorlib-heading animate-box">My Skills</h2>
+									</div>
+								</div>
+								<div className="row">
+									<div className="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+										<p>Efficient in technical languages like C, JAVA,PYTHON.Familiar with operating systems, platforms like Windows (Win 7 & Win 10), Ubuntu, and Linux. Highly Efficient in Frameworks like django, Hypernet, react.js. Moderate efficiency in machine learning with tensorflow</p>
+									</div>
+									<div className="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+										<div className="progress-wrap">
+											<h3>python</h3>
+											<div className="progress">
+												<div className="progress-bar color-1" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style={{ width: '95%' }}>
+													<span>95%</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div className="col-md-6 animate-box" data-animate-effect="fadeInRight">
+										<div className="progress-wrap">
+											<h3>JAVA</h3>
+											<div className="progress">
+												<div className="progress-bar color-2" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{ width: '90%' }}>
+													<span>90%</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div className="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+										<div className="progress-wrap">
+											<h3>C programing</h3>
+											<div className="progress">
+												<div className="progress-bar color-3" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style={{ width: '85%' }}>
+													<span>85%</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div className="col-md-6 animate-box" data-animate-effect="fadeInRight">
+										<div className="progress-wrap">
+											<h3>Django</h3>
+											<div className="progress">
+												<div className="progress-bar color-4" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style={{ width: '90%' }}>
+													<span>90%</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div className="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+										<div className="progress-wrap">
+											<h3>react.js</h3>
+											<div className="progress">
+												<div className="progress-bar color-5" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style={{ width: '80%' }}>
+													<span>80%</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div className="col-md-6 animate-box" data-animate-effect="fadeInRight">
+										<div className="progress-wrap">
+											<h3>React Native </h3>
+											<div className="progress">
+												<div className="progress-bar color-6" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{ width: '75%' }}>
+													<span>75%</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<section className="colorlib-education" data-section="education">
+							<div className="colorlib-narrow-content">
+								<div className="row">
+									<div className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+										<span className="heading-meta">Education</span>
+										<h2 className="colorlib-heading animate-box">Education</h2>
+									</div>
+								</div>
+								<div className="row">
+									<div className="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+										<div className="fancy-collapse-panel">
+											<div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+												{/* <!-- <div className="panel panel-default">
+									    <div className="panel-heading" role="tab" id="headingOne">
+									        <h4 className="panel-title">
 									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Master Degree Graphic Design
 									            </a>
 									        </h4>
 									    </div>
-									    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-									         <div class="panel-body">
-									            <div class="row">
-										      		<div class="col-md-6">
+									    <div id="collapseOne" className="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+									         <div className="panel-body">
+									            <div className="row">
+										      		<div className="col-md-6">
 										      			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 										      		</div>
-										      		<div class="col-md-6">
+										      		<div className="col-md-6">
 										      			<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 										      		</div>
 										      	</div>
 									         </div>
 									    </div>
 									</div> --> */}
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingTwo">
-									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Bachelor Degree of Computer Science and Engeering
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-									        <div class="panel-body">
-									            <p><strong>Graduation Details: B.E(computer science engineering) </strong> in <strong>Nagarjuna College of Engineering and Technology</strong> 
-													from 2019-23 with <strong>7.8(CGPA)</strong> </p>
-													{/* <!-- <ul>
+												<div className="panel panel-default">
+													<div className="panel-heading" role="tab" id="headingTwo">
+														<h4 className="panel-title">
+															<a className="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Bachelor Degree of Computer Science and Engeering
+															</a>
+														</h4>
+													</div>
+													<div id="collapseTwo" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+														<div className="panel-body">
+															<p><strong>Graduation Details: B.E(computer science engineering) </strong> in <strong>Nagarjuna College of Engineering and Technology</strong>
+																from 2019-23 with <strong>7.8(CGPA)</strong> </p>
+															{/* <!-- <ul>
 														<li>Separated they live in Bookmarksgrove right</li>
 														<li>Separated they live in Bookmarksgrove right</li>
 													</ul> --> */}
-									        </div>
-									    </div>
-									</div>
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingThree">
-									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Pre Pre-University
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-									        <div class="panel-body">
-									            <p><strong>Senior Secondary: Pre-University(PCME) </strong> in <strong>Nagarjuna Pre-University collage</strong> 
-													from 2018-19 with <strong>71%</strong></p>	
-									        </div>
-									    </div>
-									</div>
+														</div>
+													</div>
+												</div>
+												<div className="panel panel-default">
+													<div className="panel-heading" role="tab" id="headingThree">
+														<h4 className="panel-title">
+															<a className="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Pre Pre-University
+															</a>
+														</h4>
+													</div>
+													<div id="collapseThree" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+														<div className="panel-body">
+															<p><strong>Senior Secondary: Pre-University(PCME) </strong> in <strong>Nagarjuna Pre-University collage</strong>
+																from 2018-19 with <strong>71%</strong></p>
+														</div>
+													</div>
+												</div>
 
-									<div class="panel panel-default">
-									    <div class="panel-heading" role="tab" id="headingFour">
-									        <h4 class="panel-title">
-									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">High school
-									            </a>
-									        </h4>
-									    </div>
-									    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-									        <div class="panel-body">
-												 
-												<p><strong>Higher Secondary: MEC Public School </strong> in <strong>MEC Public School</strong> 
-													from 2016-17 with <strong>7.2(CGPA)</strong></p>									        
+												<div className="panel panel-default">
+													<div className="panel-heading" role="tab" id="headingFour">
+														<h4 className="panel-title">
+															<a className="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">High school
+															</a>
+														</h4>
+													</div>
+													<div id="collapseFour" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+														<div className="panel-body">
+
+															<p><strong>Higher Secondary: MEC Public School </strong> in <strong>MEC Public School</strong>
+																from 2016-17 with <strong>7.2(CGPA)</strong></p>
+														</div>
+													</div>
+												</div>
+
 											</div>
-									    </div>
+										</div>
 									</div>
-
 								</div>
 							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+						</section>
 
-			<section class="colorlib-experience" data-section="experience">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Experience</span>
-							<h2 class="colorlib-heading animate-box">Courses</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-				         <div class="timeline-centered">
-					         {/* <!-- <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-					            <div class="timeline-entry-inner">
+						<section className="colorlib-experience" data-section="experience">
+							<div className="colorlib-narrow-content">
+								<div className="row">
+									<div className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+										<span className="heading-meta">Experience</span>
+										<h2 className="colorlib-heading animate-box">Courses</h2>
+									</div>
+								</div>
+								<div className="row">
+									<div className="col-md-12">
+										<div className="timeline-centered">
+											{/* <!-- <article className="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div className="timeline-entry-inner">
 
-					               <div class="timeline-icon color-1">
-					                  <i class="icon-pen2"></i>
+					               <div className="timeline-icon color-1">
+					                  <i className="icon-pen2"></i>
 					               </div>
 
-					               <div class="timeline-label">
+					               <div className="timeline-label">
 					                  <h2><a href="#">Full Stack Developer</a> <span>2017-2018</span></h2>
 					                  <p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial two promise. Greatly who affixed suppose but enquire compact prepare all put. Added forth chief trees but rooms think may.</p>
 					               </div>
@@ -425,366 +444,365 @@ function App() {
 					         </article> --> */}
 
 
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-2">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2><a href="#">React native using webSocket in Udemy</a> <span>2017-2018</span></h2>
-									   <p>React Native is growing at a fast pace, while more and more companies of any size are adopting it to build cross-platform applications with a single code base.</p>
-									   	<ul>
-											<li>Navigate between screens.</li>
-											<li>Navigate to screens dynamically.</li>
-											<li>Use of The Crypto Live Prices API.</li>
-											<li>Build your own WebSocket in the server and the mobile app and exchange the data using Socket-IO.</li>
-											<li>Build your API in the server using Nodejs.</li>
-											<li>Add custom styles.</li>
-											<li>Component-based development.</li>
-											<li>React Hooks.</li>
-											<li>Functional Components.</li>
-											<li>TypeScript.</li>
-										</ul>
-					               </div>
-					            </div>
-					         </article>
+											<article className="timeline-entry animate-box" data-animate-effect="fadeInRight">
+												<div className="timeline-entry-inner">
+													<div className="timeline-icon color-2">
+														<i className="icon-pen2"></i>
+													</div>
+													<div className="timeline-label">
+														<h2><a href="#">React native using webSocket in Udemy</a> <span>2017-2018</span></h2>
+														<p>React Native is growing at a fast pace, while more and more companies of any size are adopting it to build cross-platform applications with a single code base.</p>
+														<ul>
+															<li>Navigate between screens.</li>
+															<li>Navigate to screens dynamically.</li>
+															<li>Use of The Crypto Live Prices API.</li>
+															<li>Build your own WebSocket in the server and the mobile app and exchange the data using Socket-IO.</li>
+															<li>Build your API in the server using Nodejs.</li>
+															<li>Add custom styles.</li>
+															<li>Component-based development.</li>
+															<li>React Hooks.</li>
+															<li>Functional Components.</li>
+															<li>TypeScript.</li>
+														</ul>
+													</div>
+												</div>
+											</article>
 
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-3">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2><a href="#">Python for machine Learning in Udemy</a> <span>2017-2018</span></h2>
-					                  <p>Machine Learning and artificial intelligence (AI) is everywhere. I have learnt many consept like
-											<li>Supervised Learning
-												<ul>
-                          <li>Multiple variable Linear regression</li>
-                          <li>Regression</li>
-                          <li>Naïve bayes classifiers</li>
-                          <li> Multiple regression</li>
-                          <li>K-NN classification</li>
-                          <li>Support vector machines</li>
-												</ul>
-											</li>
-											<li>Unsupervised Learning
-											<ul>
-												<li>Intro to Clustering</li>
-												<li>K-means clustering</li>
-												<li> High-dimensional clustering</li>
-												<li>Hierarchical clustering</li>
-												<li>Dimension Reduction-PCA</li>
-											</ul>
-											</li>
-											<li> Classification
-												<ul>
-													<li>Introduction to Classification</li>
-													<li>K-Nearest Neighbours</li>
-													<li>Evaluation Metrics in Classification</li>
-													<li>Introduction to decision tress</li>
-													<li>Building Decision Tress</li>
-													<li>Into Logistic regression</li>
-													<li>Logistic regression vs Linear Regression</li>
-													<li>Logistic Regression training</li>
-													<li>Support vector machine</li>
-												</ul>
-											</li>
-									</p>
-					               </div>
-					            </div>
-					         </article>
+											<article className="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+												<div className="timeline-entry-inner">
+													<div className="timeline-icon color-3">
+														<i className="icon-pen2"></i>
+													</div>
+													<div className="timeline-label">
+														<h2><a href="#">Python for machine Learning in Udemy</a> <span>2017-2018</span></h2>
+														<p>Machine Learning and artificial intelligence (AI) is everywhere. I have learnt many consept like</p>
+														<li>Supervised Learning
+															<ul>
+																<li>Multiple variable Linear regression</li>
+																<li>Regression</li>
+																<li>Naïve bayes classifiers</li>
+																<li> Multiple regression</li>
+																<li>K-NN classification</li>
+																<li>Support vector machines</li>
+															</ul>
+														</li>
+														<li>Unsupervised Learning
+															<ul>
+																<li>Intro to Clustering</li>
+																<li>K-means clustering</li>
+																<li> High-dimensional clustering</li>
+																<li>Hierarchical clustering</li>
+																<li>Dimension Reduction-PCA</li>
+															</ul>
+														</li>
+														<li> Classification
+															<ul>
+																<li>Introduction to Classification</li>
+																<li>K-Nearest Neighbours</li>
+																<li>Evaluation Metrics in Classification</li>
+																<li>Introduction to decision tress</li>
+																<li>Building Decision Tress</li>
+																<li>Into Logistic regression</li>
+																<li>Logistic regression vs Linear Regression</li>
+																<li>Logistic Regression training</li>
+																<li>Support vector machine</li>
+															</ul>
+														</li>
+													</div>
+												</div>
+											</article>
 
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-4">
-					                  <i class="icon-pen2"></i>
-					               </div>
-					               <div class="timeline-label">
-					               	<h2><a href="#">UI/UX Design with figma in Udemy </a> <span>2017-2018</span></h2>
-									  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-									    <ul>
-											<li>How to design for all types of devices using Figma and other tools used by some of the top designers in the world</li>
-											<li>how to Master both Web and Mobile design principles and how to go from sketching to fully fledged high fidelity designs that will wow customers</li>
-											<li>I learnt to be a designer as well as a web developer at the same time (a rare combination of skills that is in high demand)!</li>
-											<li>I Learnt UI/UX best practices using the latest trends in the industry</li>
-											<li>I had learnt be able to send your finished work to other professionals in the correct formats.</li>
-											<li>I had learnt be able to start earning money from your UI/UX Skills.</li>
-											<li>I had learnt to design websites & mobile phone apps.</li>
-											<li>I had learnt how to reuse design elements for future projects</li>
-											<li>Wireframing in order to produce a functional prototype</li>
-											<li>The principles of User Interface Design and Prototyping</li>
-											<li>Working with your clients/team right within Figma</li>
-											<li>Building interactive prototypes to share with co-workers and clients</li>
-											<li>Creating great experiences with applications of UX Design</li>
-										</ul>		
-					               </div>
-					            </div>
-					         </article>
+											<article className="timeline-entry animate-box" data-animate-effect="fadeInTop">
+												<div className="timeline-entry-inner">
+													<div className="timeline-icon color-4">
+														<i className="icon-pen2"></i>
+													</div>
+													<div className="timeline-label">
+														<h2><a href="#">UI/UX Design with figma in Udemy </a> <span>2017-2018</span></h2>
+														<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+														<ul>
+															<li>How to design for all types of devices using Figma and other tools used by some of the top designers in the world</li>
+															<li>how to Master both Web and Mobile design principles and how to go from sketching to fully fledged high fidelity designs that will wow customers</li>
+															<li>I learnt to be a designer as well as a web developer at the same time (a rare combination of skills that is in high demand)!</li>
+															<li>I Learnt UI/UX best practices using the latest trends in the industry</li>
+															<li>I had learnt be able to send your finished work to other professionals in the correct formats.</li>
+															<li>I had learnt be able to start earning money from your UI/UX Skills.</li>
+															<li>I had learnt to design websites & mobile phone apps.</li>
+															<li>I had learnt how to reuse design elements for future projects</li>
+															<li>Wireframing in order to produce a functional prototype</li>
+															<li>The principles of User Interface Design and Prototyping</li>
+															<li>Working with your clients/team right within Figma</li>
+															<li>Building interactive prototypes to share with co-workers and clients</li>
+															<li>Creating great experiences with applications of UX Design</li>
+														</ul>
+													</div>
+												</div>
+											</article>
 
-					         {/* <!-- <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-5">
-					                  <i class="icon-pen2"></i>
+											{/* <!-- <article className="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div className="timeline-entry-inner">
+					               <div className="timeline-icon color-5">
+					                  <i className="icon-pen2"></i>
 					               </div>
-					               <div class="timeline-label">
+					               <div className="timeline-label">
 					               	<h2><a href="#">UI/UX Designer at Envato</a> <span>2017-2018</span></h2>
 					                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
 					               </div>
 					            </div>
 					         </article> --> */}
 
-					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
-					            <div class="timeline-entry-inner">
-					               <div class="timeline-icon color-none">
-					               </div>
-					            </div>
-					         </article>
-					      </div>
-					   </div>
-				   </div>
-				</div>
-			</section>
+											<article className="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
+												<div className="timeline-entry-inner">
+													<div className="timeline-icon color-none">
+													</div>
+												</div>
+											</article>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
 
-			<section class="colorlib-work" data-section="work" id="projects">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">My Work</span>
-							<h2 class="colorlib-heading animate-box">Recent Work</h2>
-						</div>
-					</div>
-					<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-						<div class="col-md-12">
-							<p class="work-menu">
-								<span><a href="#" class="active">Projects</a></span> 
-								{/* <!-- <span><a href="#">Web Design</a></span> 
+						<section className="colorlib-work" data-section="work" id="projects">
+							<div className="colorlib-narrow-content">
+								<div className="row">
+									<div className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+										<span className="heading-meta">My Work</span>
+										<h2 className="colorlib-heading animate-box">Recent Work</h2>
+									</div>
+								</div>
+								<div className="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+									<div className="col-md-12">
+										<p className="work-menu">
+											<span><a href="#" className="active">Projects</a></span>
+											{/* <!-- <span><a href="#">Web Design</a></span> 
 								<span><a href="#">Software</a></span> 
 								<span><a href="#">Apps</a></span> --> */}
-							</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<h3 style="font-family: Quicksand, Arial, sans-serif;">E-commers website</h3>
-							<div class="project" style="background-image: url(images/ecommerce-conncet-plus.jpg);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="work.html">Work 01</a></h3>
-										<h3 style="color:white;">E-commers website</h3>
-										<span>This website allows to shop a products and payment then through paypal paymentgate way or form any debit card </span>
-										<p class="icon">
-											<span><a href="#"><i class="icon-share3"></i></a></span>
-											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
 										</p>
 									</div>
 								</div>
-							</div>
-						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<h3 style="font-family: Quicksand, Arial, sans-serif;">Real time Chat application</h3>
-							<div class="project" style="background-image: url(images/chatphoto.jpg);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="work.html">Work 02</a></h3>
-										<h3 style="color: white;">Real time Chat application</h3>
-										<span>This website allows to communicate throught out the word using text,audio or video through web application</span>
-										<p class="icon">
-											<span><a href="#"><i class="icon-share3"></i></a></span>
-											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
-										</p>
+								<div className="row">
+									<div className="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+										<h3 style={{ fontFamily: 'Quicksand, Arial, sans-serif' }}>E-commers website</h3>
+										<div className="project" style={{ backgroundImage: "url('/assets/images/ecommerce-conncet-plus.jpg')" }}>
+											<div className="desc">
+												<div className="con">
+													<h3><a href="work.html">Work 01</a></h3>
+													<h3 style={{ color: 'white' }}>E-commers website</h3>
+													<span>This website allows to shop a products and payment then through paypal paymentgate way or form any debit card </span>
+													<p className="icon">
+														<span><a href="#"><i className="icon-share3"></i></a></span>
+														<span><a href="#"><i className="icon-eye"></i> 100</a></span>
+														<span><a href="#"><i className="icon-heart"></i> 49</a></span>
+													</p>
+												</div>
+											</div>
+										</div>
 									</div>
-								</div>
-							</div>
-						</div>
-						{/* <!-- <div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
-							<div class="project" style="background-image: url(images/img-3.jpg);">
-								<div class="desc">
-									<div class="con">
+									<div className="col-md-6 animate-box" data-animate-effect="fadeInRight">
+										<h3 style={{ fontFamily: 'Quicksand, Arial, sans-serif' }}>Real time Chat application</h3>
+										<div className="project" style={{ backgroundImage: "url('/assets/images/chatphoto.jpg')" }}>
+											<div className="desc">
+												<div className="con">
+													<h3><a href="work.html">Work 02</a></h3>
+													<h3 style={{ color: 'white' }}>Real time Chat application</h3>
+													<span>This website allows to communicate throught out the word using text,audio or video through web application</span>
+													<p className="icon">
+														<span><a href="#"><i className="icon-share3"></i></a></span>
+														<span><a href="#"><i className="icon-eye"></i> 100</a></span>
+														<span><a href="#"><i className="icon-heart"></i> 49</a></span>
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									{/* <!-- <div className="col-md-6 animate-box" data-animate-effect="fadeInTop">
+							<div className="project" style="background-image: url(images/img-3.jpg);">
+								<div className="desc">
+									<div className="con">
 										<h3><a href="work.html">Work 03</a></h3>
 										<span>Illustration</span>
-										<p class="icon">
-											<span><a href="#"><i class="icon-share3"></i></a></span>
-											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										<p className="icon">
+											<span><a href="#"><i className="icon-share3"></i></a></span>
+											<span><a href="#"><i className="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i className="icon-heart"></i> 49</a></span>
 										</p>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
-							<div class="project" style="background-image: url(images/img-4.jpg);">
-								<div class="desc">
-									<div class="con">
+						<div className="col-md-6 animate-box" data-animate-effect="fadeInBottom">
+							<div className="project" style="background-image: url(images/img-4.jpg);">
+								<div className="desc">
+									<div className="con">
 										<h3><a href="work.html">Work 04</a></h3>
 										<span>Application</span>
-										<p class="icon">
-											<span><a href="#"><i class="icon-share3"></i></a></span>
-											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										<p className="icon">
+											<span><a href="#"><i className="icon-share3"></i></a></span>
+											<span><a href="#"><i className="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i className="icon-heart"></i> 49</a></span>
 										</p>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/img-5.jpg);">
-								<div class="desc">
-									<div class="con">
+						<div className="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div className="project" style="background-image: url(images/img-5.jpg);">
+								<div className="desc">
+									<div className="con">
 										<h3><a href="work.html">Work 05</a></h3>
 										<span>Graphic, Logo</span>
-										<p class="icon">
-											<span><a href="#"><i class="icon-share3"></i></a></span>
-											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										<p className="icon">
+											<span><a href="#"><i className="icon-share3"></i></a></span>
+											<span><a href="#"><i className="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i className="icon-heart"></i> 49</a></span>
 										</p>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="project" style="background-image: url(images/img-6.jpg);">
-								<div class="desc">
-									<div class="con">
+						<div className="col-md-6 animate-box" data-animate-effect="fadeInRight">
+							<div className="project" style="background-image: url(images/img-6.jpg);">
+								<div className="desc">
+									<div className="con">
 										<h3><a href="work.html">Work 06</a></h3>
 										<span>Web Design</span>
-										<p class="icon">
-											<span><a href="#"><i class="icon-share3"></i></a></span>
-											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										<p className="icon">
+											<span><a href="#"><i className="icon-share3"></i></a></span>
+											<span><a href="#"><i className="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i className="icon-heart"></i> 49</a></span>
 										</p>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box">
-							<p><a href="#" class="btn btn-primary btn-lg btn-load-more">Load more <i class="icon-reload"></i></a></p>
+					<div className="row">
+						<div className="col-md-12 animate-box">
+							<p><a href="#" className="btn btn-primary btn-lg btn-load-more">Load more <i className="icon-reload"></i></a></p>
 						</div>--> */}
-				  </div> 
-				</div>
-			</section>
+								</div>
+							</div>
+						</section>
 
-			{/* <!-- <section class="colorlib-blog" data-section="blog">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Read</span>
-							<h2 class="colorlib-heading">Recent Blog</h2>
+						{/* <!-- <section className="colorlib-blog" data-section="blog">
+				<div className="colorlib-narrow-content">
+					<div className="row">
+						<div className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span className="heading-meta">Read</span>
+							<h2 className="colorlib-heading">Recent Blog</h2>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="blog-entry">
-								<a href="blog.html" class="blog-img"><img src="images/blog-1.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
-								<div class="desc">
-									<span><small>April 14, 2018 </small> | <small> Web Design </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
+					<div className="row">
+						<div className="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div className="blog-entry">
+								<a href="blog.html" className="blog-img"><img src="images/blog-1.jpg" className="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+								<div className="desc">
+									<span><small>April 14, 2018 </small> | <small> Web Design </small> | <small> <i className="icon-bubble3"></i> 4</small></span>
 									<h3><a href="blog.html">Renovating National Gallery</a></h3>
 									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="blog-entry">
-								<a href="blog.html" class="blog-img"><img src="images/blog-2.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
-								<div class="desc">
-									<span><small>April 14, 2018 </small> | <small> Web Design </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
+						<div className="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInRight">
+							<div className="blog-entry">
+								<a href="blog.html" className="blog-img"><img src="images/blog-2.jpg" className="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+								<div className="desc">
+									<span><small>April 14, 2018 </small> | <small> Web Design </small> | <small> <i className="icon-bubble3"></i> 4</small></span>
 									<h3><a href="blog.html">Wordpress for a Beginner</a></h3>
 									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="blog-entry">
-								<a href="blog.html" class="blog-img"><img src="images/blog-3.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
-								<div class="desc">
-									<span><small>April 14, 2018 </small> | <small> Inspiration </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
+						<div className="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div className="blog-entry">
+								<a href="blog.html" className="blog-img"><img src="images/blog-3.jpg" className="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+								<div className="desc">
+									<span><small>April 14, 2018 </small> | <small> Inspiration </small> | <small> <i className="icon-bubble3"></i> 4</small></span>
 									<h3><a href="blog.html">Make website from scratch</a></h3>
 									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box">
-							<p><a href="#" class="btn btn-primary btn-lg btn-load-more">Load more <i class="icon-reload"></i></a></p>
+					<div className="row">
+						<div className="col-md-12 animate-box">
+							<p><a href="#" className="btn btn-primary btn-lg btn-load-more">Load more <i className="icon-reload"></i></a></p>
 						</div>
 					</div>
 				</div>
 			</section> --> */}
 
-			<section class="colorlib-contact" data-section="contact">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Get in Touch</span>
-							<h2 class="colorlib-heading">Contact</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-5">
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-globe-outline"></i>
+						<section className="colorlib-contact" data-section="contact">
+							<div className="colorlib-narrow-content">
+								<div className="row">
+									<div className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+										<span className="heading-meta">Get in Touch</span>
+										<h2 className="colorlib-heading">Contact</h2>
+									</div>
 								</div>
-								<div class="colorlib-text">
-									<p><a href="#">pranavsk000@gmail.com</a></p>
-								</div>
-							</div>
+								<div className="row">
+									<div className="col-md-5">
+										<div className="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+											<div className="colorlib-icon">
+												<i className="icon-globe-outline"></i>
+											</div>
+											<div className="colorlib-text">
+												<p><a href="#">pranavsk000@gmail.com</a></p>
+											</div>
+										</div>
 
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-map"></i>
-								</div>
-								<div class="colorlib-text">
-									<p>#15, 3rd main, 3rd cross, Sir gururaghavendra nilaya, ananthapura gate, Banglore, 560064</p>
-								</div>
-							</div>
+										<div className="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+											<div className="colorlib-icon">
+												<i className="icon-map"></i>
+											</div>
+											<div className="colorlib-text">
+												<p>#15, 3rd main, 3rd cross, Sir gururaghavendra nilaya, ananthapura gate, Banglore, 560064</p>
+											</div>
+										</div>
 
-							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="colorlib-icon">
-									<i class="icon-phone"></i>
-								</div>
-								<div class="colorlib-text">
-									<p><a href="">+91 8618374512</a></p>
-								</div>
-							</div>
-						</div>
-						{/* <!-- <div class="col-md-7 col-md-push-1">
-							<div class="row">
-								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
+										<div className="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+											<div className="colorlib-icon">
+												<i className="icon-phone"></i>
+											</div>
+											<div className="colorlib-text">
+												<p><a href="">+91 8618374512</a></p>
+											</div>
+										</div>
+									</div>
+									{/* <!-- <div className="col-md-7 col-md-push-1">
+							<div className="row">
+								<div className="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
 									<form action="">
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Name">
+										<div className="form-group">
+											<input type="text" className="form-control" placeholder="Name">
 										</div>
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Email">
+										<div className="form-group">
+											<input type="text" className="form-control" placeholder="Email">
 										</div>
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Subject">
+										<div className="form-group">
+											<input type="text" className="form-control" placeholder="Subject">
 										</div>
-										<div class="form-group">
-											<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+										<div className="form-group">
+											<textarea name="" id="message" cols="30" rows="7" className="form-control" placeholder="Message"></textarea>
 										</div>
-										<div class="form-group">
-											<input type="submit" class="btn btn-primary btn-send-message" value="Send Message">
+										<div className="form-group">
+											<input type="submit" className="btn btn-primary btn-send-message" value="Send Message">
 										</div>
 									</form>
 								</div>
 								
 							</div>
 						</div> --> */}
+								</div>
+							</div>
+						</section>
+
 					</div>
 				</div>
-			</section>
-
+			</div>
 		</div>
-	</div>
-	</div>
-    </div>
-  );
+	);
 }
 
 export default App;

@@ -208,7 +208,6 @@
 
 
 	var sliderMain = function() {
-		slider = document.getElementsByClassName()
 		console.log("inside slider");
 	  	$('#colorlib-hero .flexslider').flexslider({
 			animation: "fade",

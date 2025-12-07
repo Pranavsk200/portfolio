@@ -10,17 +10,17 @@ import './assets/css/style.css.map'
 // src/components/ChatComponent.jsx (or wherever your component is)
 import React, { useState } from 'react';
 // Adjust the path based on where this component is located relative to agent/app.js
-import { sendMessage } from './assets/js/app.js';
+// import { sendMessage } from './assets/js/app.js';
 
 
 
 
 function App() {
 	let input  = "Go to your projects section";
-	(async () => {
-		let input = "Go to your projects section";
-		console.log(await sendMessage(input));
-	})();
+	// (async () => {
+	// 	let input = "Go to your projects section";
+	// 	console.log(await sendMessage(input));
+	// })();
 
 	return (
 		<div className="App">

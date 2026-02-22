@@ -1427,3 +1427,54 @@ body.offcanvas {
 
 .js .animate-box {
   opacity: 0; }
+
+#ai_input_container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
+}
+
+/* Blue circle */
+#circle_elem {
+  width: 60px;
+  height: 60px;
+  background-color: blue;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+#circle_elem:hover {
+  transform: scale(0.9);
+}
+
+/* Hidden input initially */
+.ai_input {
+  width: 0;
+  opacity: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  height: 45px;
+  transition: all 0.4s ease;
+  transform: translateX(-20px);
+}
+
+/* When open */
+#ai_input_container.open .ai_input {
+  width: 220px;
+  opacity: 1;
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  transform: translateX(0);
+}

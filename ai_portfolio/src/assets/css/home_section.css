@@ -1,0 +1,31 @@
+#home{
+    display: flex;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.info_name h2{
+    z-index: 1;
+    color: white;
+    font-family: 'Inter',system-ui,sans-serif;
+}
+
+.info_name {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--chakra-space-6);
+}
+
+.name1{
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 1.33;
+    color: #ffff;
+}

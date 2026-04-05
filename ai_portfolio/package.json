@@ -32,8 +32,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -55,5 +55,7 @@
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
-  }
+  }, 
+  "homepage": "https://Pranavsk200.github.io/ai_portfolio"
+
 }

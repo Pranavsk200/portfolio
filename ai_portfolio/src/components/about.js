@@ -57,7 +57,7 @@ const AboutMe = () => {
               _hover={{ color: "white" }}
               transition="colors 0.2s"
               cursor="pointer"
-              onClick={() => window.open("https://github.com/ciangoon", "_blank")}
+              onClick={() => window.open("https://github.com/Pranavsk200", "_blank")}
               aria-label="GitHub profile"
             />
             <Icon
@@ -67,7 +67,7 @@ const AboutMe = () => {
               _hover={{ color: "white" }}
               transition="colors 0.2s"
               cursor="pointer"
-              onClick={() => window.open("https://www.linkedin.com/in/ciangoon/", "_blank")}
+              onClick={() => window.open("https://www.linkedin.com/in/pranavsk-dev/", "_blank")}
               aria-label="LinkedIn profile"
             />
             <Icon
